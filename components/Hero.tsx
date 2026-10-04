@@ -11,12 +11,12 @@ type AudienceKey =
   | "students";
 
 const AUDIENCE_TABS: { key: AudienceKey; label: string }[] = [
-  { key: "anyone", label: "For anyone" },
   { key: "recruiters", label: "Recruiters" },
   { key: "managers", label: "Hiring Managers" },
   { key: "researchers", label: "Researchers" },
   { key: "engineers", label: "Engineers" },
   { key: "students", label: "Students" },
+  { key: "anyone", label: "For anyone" },
 ];
 
 const HEADLINES: Record<AudienceKey, { h: React.ReactNode; s: string }> = {
