@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jasnoor Sandhu | Detailed CV</title>
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #176b87;
+      --teal: #2a9d8f;
+      --ink: #1f2933;
+      --muted: #52606d;
+      --line: #d9e2ec;
+      --pale: #eef7f7;
+      --paper: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #dfe5eb;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9.25pt;
+      line-height: 1.36;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      position: relative;
+      width: 210mm;
+      height: 297mm;
+      margin: 8mm auto;
+      padding: 13mm 15mm 12mm;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 3mm 12mm rgba(16, 42, 67, 0.14);
+      page-break-after: always;
+    }
+
+    .page:last-child { page-break-after: auto; }
+
+    .top-rule {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4.5mm;
+      background: linear-gradient(90deg, var(--navy) 0 70%, var(--teal) 70% 100%);
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 10mm;
+      padding: 2mm 0 4mm;
+      border-bottom: 1.2pt solid var(--navy);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 25pt;
+      line-height: 1;
+      letter-spacing: 0.2pt;
+    }
+
+    .headline {
+      margin: 2mm 0 0;
+      color: var(--blue);
+      font-size: 10.6pt;
+      font-weight: 700;
+      letter-spacing: 0.15pt;
+    }
+
+    .contact {
+      color: var(--muted);
+      font-size: 8.35pt;
+      line-height: 1.55;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .contact a { color: var(--blue); }
+
+    .page-title {
+      margin: 0 0 4mm;
+      color: var(--navy);
+      font-size: 18pt;
+      line-height: 1.1;
+    }
+
+    .page-kicker {
+      margin: 0 0 1mm;
+      color: var(--teal);
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 1.1pt;
+      text-transform: uppercase;
+    }
+
+    .section { margin-top: 4.2mm; }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+      margin: 0 0 2.3mm;
+      color: var(--navy);
+      font-size: 10pt;
+      font-weight: 800;
+      letter-spacing: 0.75pt;
+      text-transform: uppercase;
+    }
+
+    .section-title::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+    }
+
+    .summary {
+      margin: 0;
+      color: #334e68;
+      font-size: 9.7pt;
+      line-height: 1.48;
+    }
+
+    .summary strong { color: var(--navy); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.2mm 7mm;
+      padding: 3mm 3.5mm;
+      border-left: 2.5pt solid var(--teal);
+      background: var(--pale);
+    }
+
+    .skill-line { margin: 0; }
+    .skill-line strong { color: var(--navy); }
+
+    .role {
+      margin-top: 3.5mm;
+      break-inside: avoid;
+    }
+
+    .role:first-of-type { margin-top: 0; }
+
+    .role-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 5mm;
+      align-items: baseline;
+      margin-bottom: 1.2mm;
+    }
+
+    .role-title {
+      margin: 0;
+      color: var(--navy);
+      font-size: 11.2pt;
+      line-height: 1.18;
+    }
+
+    .role-org {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .role-date {
+      color: var(--muted);
+      font-size: 8.4pt;
+      font-weight: 700;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .role-context {
+      margin: 0 0 1.5mm;
+      color: var(--muted);
+      font-size: 8.55pt;
+      font-style: italic;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 4.7mm;
+    }
+
+    li { margin: 0 0 1.15mm; }
+    li:last-child { margin-bottom: 0; }
+    li::marker { color: var(--teal); }
+
+    .impact-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5mm;
+      margin-top: 3mm;
+    }
+
+    .impact {
+      padding: 2.5mm 2.8mm;
+      border: 1px solid var(--line);
+      border-top: 2.5pt solid var(--blue);
+    }
+
+    .impact strong {
+      display: block;
+      margin-bottom: 0.6mm;
+      color: var(--navy);
+      font-size: 10pt;
+    }
+
+    .impact span {
+      color: var(--muted);
+      font-size: 7.9pt;
+      line-height: 1.25;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 8mm;
+    }
+
+    .edu-card {
+      margin-bottom: 3mm;
+      padding: 3mm;
+      border: 1px solid var(--line);
+      border-left: 2.5pt solid var(--blue);
+      break-inside: avoid;
+    }
+
+    .edu-card:last-child { margin-bottom: 0; }
+    .edu-card h3 { margin: 0 0 0.7mm; color: var(--navy); font-size: 9.8pt; }
+    .edu-card p { margin: 0.4mm 0 0; color: var(--muted); }
+
+    .highlight-box {
+      margin-top: 3.5mm;
+      padding: 3.2mm;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .highlight-box h3 {
+      margin: 0 0 1.5mm;
+      color: #8de0d2;
+      font-size: 9pt;
+      letter-spacing: 0.65pt;
+      text-transform: uppercase;
+    }
+
+    .highlight-box p { margin: 0 0 1.2mm; }
+    .highlight-box p:last-child { margin-bottom: 0; }
+
+    .project {
+      display: grid;
+      grid-template-columns: 28mm 1fr;
+      gap: 4mm;
+      padding: 3.4mm 0;
+      border-bottom: 1px solid var(--line);
+      break-inside: avoid;
+    }
+
+    .project:last-of-type { border-bottom: 0; }
+
+    .project-meta {
+      color: var(--blue);
+      font-size: 8pt;
+      font-weight: 700;
+      line-height: 1.45;
+      text-transform: uppercase;
+    }
+
+    .project h3 {
+      margin: 0 0 0.8mm;
+      color: var(--navy);
+      font-size: 10.6pt;
+      line-height: 1.2;
+    }
+
+    .project p { margin: 0 0 1.1mm; }
+    .project p:last-child { margin-bottom: 0; }
+
+    .repo {
+      color: var(--blue);
+      font-size: 8pt;
+      font-weight: 700;
+    }
+
+    .tags {
+      margin-top: 1.2mm;
+      color: var(--muted);
+      font-size: 7.8pt;
+      font-weight: 700;
+    }
+
+    .project-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.4mm;
+      margin: 3mm 0 1mm;
+    }
+
+    .project-stat {
+      padding: 2.4mm;
+      background: var(--pale);
+      text-align: center;
+    }
+
+    .project-stat strong {
+      display: block;
+      color: var(--navy);
+      font-size: 11pt;
+    }
+
+    .project-stat span {
+      color: var(--muted);
+      font-size: 7.3pt;
+    }
+
+    .footer {
+      position: absolute;
+      right: 15mm;
+      bottom: 6mm;
+      left: 15mm;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 1.5mm;
+      border-top: 1px solid var(--line);
+      color: #7b8794;
+      font-size: 7.2pt;
+    }
+
+    @media print {
+      html, body { background: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+
+    @page { size: A4; margin: 0; }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div class="top-rule"></div>
+    <header class="header">
+      <div>
+        <h1>Jasnoor Sandhu</h1>
+        <p class="headline">Software Engineer, Siemens EDA | Systems, Emulation &amp; Hardware–Software Co-Design</p>
+      </div>
+      <div class="contact">
+        Noida, India<br>
+        <a href="tel:+918607704453">+91 86077 04453</a> ·
+        <a href="mailto:jas9noor@gmail.com">jas9noor@gmail.com</a><br>
+        <a href="https://www.linkedin.com/in/jasnoor-sandhu-a6184021a/">LinkedIn</a> ·
+        <a href="https://github.com/jasnoor-sandhu">GitHub</a>
+      </div>
+    </header>
+
+    <div class="section">
+      <h2 class="section-title">Professional Profile</h2>
+      <p class="summary">
+        Electronics and communication engineer from <strong>IIT (BHU)</strong> with a Computer Science minor and
+        production R&amp;D experience at <strong>Siemens EDA</strong>. Works at the hardware–software boundary across
+        inter-process communication, emulation runtimes, Linux systems, RTL and FPGA development. Progressed from a
+        Siemens hardware internship to a full-time software engineering role; also contributed to compiler research at
+        EPFL and ROS2 robotics research at Victoria University. Brings strong systems debugging, structured
+        experimentation and a record of converting technical investigations into reliable engineering outcomes.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Technical Expertise</h2>
+      <div class="skills-grid">
+        <p class="skill-line"><strong>Languages:</strong> C, C++, Python, Verilog, SystemVerilog, Linux Shell, Perl</p>
+        <p class="skill-line"><strong>Systems:</strong> Linux, IPC, OS/kernel concepts, runtime debugging, data structures, OOP</p>
+        <p class="skill-line"><strong>Digital/FPGA:</strong> RTL design, AXI Stream, FPGA prototyping, simulation, verification</p>
+        <p class="skill-line"><strong>Tools:</strong> Xilinx Vivado/Vitis, MATLAB, Proteus, PYNQ-Z1, Questa, Veloce</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <article class="role">
+        <div class="role-head">
+          <h3 class="role-title">Software Engineer, TBX (TestBench-Express) · <span class="role-org">Siemens EDA</span></h3>
+          <div class="role-date">07 Jul 2025 – Present<br>Noida, India</div>
+        </div>
+        <p class="role-context">Research &amp; Development · Veloce hardware-emulation platform</p>
+        <ul>
+          <li>Maintain and extend <strong>TBX-IPC</strong>, the inter-process communication layer supporting coordination across the TestBench-Express runtime.</li>
+          <li>Delivered the tbx-session-id initiative to strengthen session identification and improve the <strong>operational stability of the Veloce platform</strong>.</li>
+          <li>Investigate platform and runtime behavior across IPC boundaries, building practical depth in Linux OS, kernel-facing behavior and emulation runtime internals while working on the newest chiplet flow of Veloce.</li>
+          <li>Contribute to <strong>Questa</strong> runtime work alongside core TBX responsibilities, diagnosing issues that span simulation, emulation and systems software.</li>
+          <li>Apply production-codebase discipline to maintenance, debugging and reliability improvements within a complex EDA platform.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3 class="role-title">Hardware Engineering Intern · <span class="role-org">Siemens EDA</span></h3>
+          <div class="role-date">Summer 2024<br>Noida, India</div>
+        </div>
+        <p class="role-context">Internship performance led to a full-time offer and return to Siemens EDA.</p>
+        <ul>
+          <li>Re-engineered a C++ utility to detect faulty flip-flops caused by compiler issues or emulation errors, reducing analysis time by <strong>50%</strong>.</li>
+          <li>Added progress reporting, flop filtering and waveform visualisation, making investigations faster and easier for users; the enhanced utility was adopted by multiple team members.</li>
+          <li>Built a systems foundation across Linux, OS and emulation through shell work and large-codebase debugging, alongside exposure to production R&amp;D on Veloce and Questa runtimes.</li>
+        </ul>
+      </article>
+    </div>
+
+    <footer class="footer"><span>Jasnoor Sandhu · Curriculum Vitae</span><span>Page 1 of 3</span></footer>
+  </section>
+
+  <section class="page">
+    <div class="top-rule"></div>
+    <p class="page-kicker">Research, education &amp; leadership</p>
+    <h2 class="page-title">A cross-disciplinary engineering foundation</h2>
+
+    <div class="section">
+      <h2 class="section-title">Research Experience</h2>
+
+      <article class="role">
+        <div class="role-head">
+          <h3 class="role-title">Summer Research Intern · <span class="role-org">EPFL, Laboratory for Processor Architecture</span></h3>
+          <div class="role-date">Summer 2025<br>Lausanne, Switzerland</div>
+        </div>
+        <p class="role-context">Dynamatic High-Level Synthesis compiler · Supervised by Prof. Paolo Ienne</p>
+        <ul>
+          <li>Improved Dynamatic’s buffer-placement workflow for dataflow circuits, with emphasis on mixed-integer linear programming (MILP)-based scheduling.</li>
+          <li>Identified missing throughput constraints and corrected the formulation, improving the accuracy of buffer insertion.</li>
+          <li>Worked at the intersection of compiler optimization and digital hardware, reasoning about scheduling, throughput and dataflow behavior.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3 class="role-title">Research Intern · <span class="role-org">Victoria University</span></h3>
+          <div class="role-date">Summer 2023<br>Melbourne, Australia</div>
+        </div>
+        <p class="role-context">ROS2 robotics · TurtleBot4 · Raspberry Pi 4 · Linux</p>
+        <ul>
+          <li>Modified ROS2 packages supporting TurtleBot4 navigation and mapping in a Raspberry Pi 4/Linux environment.</li>
+          <li>Integrated and tested software within a physical robotics stack, building practical experience with distributed robotic systems.</li>
+          <li>Planned and delivered a live TurtleBot4 demonstration for <strong>40+ university students</strong>.</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="section two-col">
+      <div>
+        <h2 class="section-title">Education</h2>
+        <div class="edu-card">
+          <h3>Indian Institute of Technology (BHU), Varanasi</h3>
+          <p><strong>B.Tech., Electronics &amp; Communication Engineering</strong> · 2021–2025</p>
+          <p>Minor: Computer Science Engineering</p>
+          <p><strong>CGPA: 9.50/10 · Department Rank: 3/146</strong></p>
+        </div>
+        <div class="edu-card">
+          <h3>Sudesh Vatika Convent School</h3>
+          <p>Senior Secondary (Class XII) · 2021</p>
+          <p><strong>91.6%</strong></p>
+        </div>
+        <div class="edu-card">
+          <h3>St. Joseph’s High School</h3>
+          <p>Secondary (Class X) · 2019</p>
+          <p><strong>92.5%</strong></p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="section-title">Leadership</h2>
+        <article class="role">
+          <div class="role-head">
+            <h3 class="role-title">Joint General Secretary</h3>
+            <div class="role-date">2024</div>
+          </div>
+          <p class="role-context">Electronics Engineering Society, IIT (BHU)</p>
+          <ul>
+            <li>Coordinated Marketing, Design, Web, Publicity and PR teams for EES Fest’24.</li>
+            <li>Helped deliver the festival for a total footfall of <strong>800 students</strong>.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-head">
+            <h3 class="role-title">Event Manager, RoboWars</h3>
+            <div class="role-date">Technex’24</div>
+          </div>
+          <ul>
+            <li>Coordinated 24 robot-war teams, built the arena, and managed event logistics for 1,000 attendees.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-head">
+            <h3 class="role-title">DUGC Representative</h3>
+            <div class="role-date">3 years</div>
+          </div>
+          <ul>
+            <li>Selected for three consecutive years as DUGC Representative, coordinating with faculty and representing student perspectives in departmental academic matters.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Selected Honours &amp; Distinctions</h2>
+      <div class="two-col">
+        <ul>
+          <li><strong>Gold Medal, IIT (BHU):</strong> Recognised for exceptional academic performance; Department Rank 3/146.</li>
+          <li><strong>JEE Advanced 2021:</strong> All India Rank 2321.</li>
+          <li><strong>JEE Main 2021:</strong> 99.24 percentile.</li>
+        </ul>
+        <ul>
+          <li><strong>CryptX, Prastuti’22:</strong> 2nd place in a cryptography event at IIT (BHU).</li>
+          <li><strong>Innovation Quest:</strong> 2nd place in a team research event on alternatives to lithium-ion batteries.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Engineering range</h3>
+      <p><strong>Systems software:</strong> IPC, Linux and emulation runtime work in a production EDA platform.</p>
+      <p><strong>Hardware design:</strong> RTL, AXI Stream IP, FPGA prototyping and numerical validation.</p>
+      <p><strong>Research:</strong> HLS compiler scheduling, wireless waveform simulation and ROS2 robotics.</p>
+    </div>
+
+    <footer class="footer"><span>jas9noor@gmail.com · github.com/jasnoor-sandhu</span><span>Page 2 of 3</span></footer>
+  </section>
+
+  <section class="page">
+    <div class="top-rule"></div>
+    <p class="page-kicker">Selected technical portfolio</p>
+    <h2 class="page-title">Projects</h2>
+
+    <article class="project">
+      <div class="project-meta">FPGA IP</div>
+      <div>
+        <h3>Goldschmidt Division Algorithm IP</h3>
+        <p>Designed a SystemVerilog floating-point division IP around the multiplication-based Goldschmidt algorithm and exposed it through an AXI Stream interface for integration in a Vivado block design.</p>
+        <p>Integrated and validated the design on a PYNQ-Z1 board, achieving <strong>six-cycle division with 99.99% accuracy</strong>.</p>
+        <p class="repo"><a href="https://github.com/jasnoor-sandhu/GoldSmithDiv">github.com/jasnoor-sandhu/GoldSmithDiv</a></p>
+        <p class="tags">SystemVerilog · AXI Stream · Vivado/Vitis · PYNQ-Z1 · RTL verification</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-meta">OTFS</div>
+      <div>
+        <h3>OTFS Waveform Design for Next-Generation Wireless</h3>
+        <p>Built MATLAB simulations comparing OFDM and OTFS across signal-to-noise conditions, with emphasis on robustness in high-mobility, high-Doppler channels.</p>
+        <p>Measured a <strong>20% improvement in spectral efficiency</strong> and a <strong>30% BER improvement</strong> in low-SNR scenarios; extended the work toward FPGA-oriented OTFS exploration.</p>
+        <p class="repo"><a href="https://github.com/jasnoor-sandhu/OTFS-OFDM">github.com/jasnoor-sandhu/OTFS-OFDM</a> · <a href="https://github.com/jasnoor-sandhu/OTFS-PYNQ-FPGA">OTFS-PYNQ-FPGA</a></p>
+        <p class="tags">MATLAB · OTFS/OFDM · BER analysis · Signal processing · FPGA exploration</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-meta">FPGA DSP<br>Acceleration</div>
+      <div>
+        <h3>FIR Filter on PYNQ-Z1</h3>
+        <p>Implemented a five-tap FIR filter as a programmable-logic accelerator and compared it with a processor-side software implementation using the same signal-processing workload.</p>
+        <p>Configured coefficients for 5 dB and −40 dB attenuation targets and recorded approximately <strong>7× hardware acceleration</strong>.</p>
+        <p class="repo"><a href="https://github.com/jasnoor-sandhu/FIR-Filter-PYNQ-FPGA">github.com/jasnoor-sandhu/FIR-Filter-PYNQ-FPGA</a></p>
+        <p class="tags">VHDL · PYNQ-Z1 · FIR filtering · Python · Matplotlib · Hardware acceleration</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-meta">FPGA DSP<br>Design Flow</div>
+      <div>
+        <h3>1024-Point FFT on PYNQ-Z1</h3>
+        <p>Built and exercised a 1024-point FFT hardware design in Xilinx Vivado 19.2, using a PYNQ overlay, DMA transfers and allocated complex-valued buffers.</p>
+        <p>Generated multi-tone test data, compared programmable-logic output with NumPy FFT results and visualized numerical error to validate the hardware/software design flow.</p>
+        <p class="repo"><a href="https://github.com/jasnoor-sandhu/FFT-PYNQ-FPGA">github.com/jasnoor-sandhu/FFT-PYNQ-FPGA</a></p>
+        <p class="tags">VHDL · FFT · DMA · PYNQ overlay · NumPy · Vivado</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-meta">RTL Design</div>
+      <div>
+        <h3>Bubble Sort in RTL</h3>
+        <p>Translated nested-loop compare-and-swap behavior into an explicit data-flow model and finite-state machine, then implemented and simulated the sorter in Verilog.</p>
+        <p>Used Vivado waveform verification to reason about register updates, clocked state transitions and hardware realization of a software algorithm.</p>
+        <p class="repo"><a href="https://github.com/jasnoor-sandhu/Bubblesort_vhdl">github.com/jasnoor-sandhu/Bubblesort_vhdl</a></p>
+        <p class="tags">Verilog · RTL · FSM design · Vivado · Simulation</p>
+      </div>
+    </article>
+
+    <footer class="footer"><span>Portfolio source: github.com/jasnoor-sandhu · Revised August 2026</span><span>Page 3 of 3</span></footer>
+  </section>
+</body>
+</html>

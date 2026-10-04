@@ -63,13 +63,10 @@ export default function About() {
           <span className="contact-link-arrow">↗</span>
         </a>
         <a
-          href="/Jasnoor_Sandhu_Resume.pdf"
-          target="_blank"
-          rel="noreferrer"
+          href="/Jasnoor_Sandhu_Detailed_CV.html"
           className="contact-link"
-          download
         >
-          Download Resume
+          View Resume
           <span className="contact-link-arrow">↗</span>
         </a>
       </div>

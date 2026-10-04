@@ -21,8 +21,8 @@ Open http://localhost:3000.
 - `components/` — `Nav`, `Hero`, `Projects`, `Values`, `Background`,
   `About`, `Footer`, plus shared behavior (`Cursor`, `useReveal`) and
   `components/projects/*` for individual project write-ups.
-- `public/Jasnoor_Sandhu_Resume.pdf` — downloadable resume, linked from the
-  About section.
+- `public/Jasnoor_Sandhu_Detailed_CV.html` — detailed resume page, linked from
+  the About section.
 
 ## Deployment (GitHub + Vercel)
 
